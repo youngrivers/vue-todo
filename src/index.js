@@ -1,8 +1,17 @@
 import Vue from 'vue'
-import APP from './app.vue'
+import App from './App.vue'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
+root.setAttribute('id', 'app');
 new Vue({
-    render: (h) => h(APP)
-}).$mount(root)
+        render: (h) => h(App)
+    }).$mount(root)
+    /* let app = new Vue({
+        el: '#app',
+        //template: '<App/>',
+        //components: { App },
+        data: {
+            ss: 'hello world!'
+        }
+    }); */

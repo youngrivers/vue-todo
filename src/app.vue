@@ -1,19 +1,23 @@
 <template>
-    <div id="test">{{text}}</div>
+    <div id="#app">
+      <h1>hello world</h1>
+        <h1>{{msg}}</h1>
+    </div>
 </template> 
 
 <script>
-    export default {
-        data() {
-            return {
-                text:'abc'
-            }
-        }
-    }
+export default {
+  name: 'app',
+  data() {
+    return {
+      msg: "abc"
+    };
+  }
+};
 </script>
 
 <style>
-    #test{
-        color: aqua;
-    }
+#app {
+  color: rgb(122, 173, 173);
+}
 </style>
