@@ -34,29 +34,40 @@ module.exports = {
     ],
     module: {
         rules: [{
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loader: {
-                        scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
-                        sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
-                    }
+            test: /\.vue$/,
+            loader: 'vue-loader',
+            options: {
+                loader: {
+                    scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+                    sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
                 }
             }
-            /* , {
-                        test: /(\.js|\.jsx)$/,
-                        use: {
-                            loader: 'bable-loader'
-                        },
-                        exclude: /(node_modeles)/
-                    } */
-            , {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            }, {
-                test: /\.(gif|jpg|jpeg|png|svg)$/,
-                use: ['file-loader']
+        }, {
+            test: /(\.js|\.jsx)$/,
+            use: {
+                loader: 'babel-loader'
             }
-        ]
+        }, {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }, {
+            test: /\.(gif|jpg|jpeg|png|svg)$/,
+            use: ['file-loader']
+                /* ,
+                            options: {
+                                name: '[name].[ext]?[hash]'
+                            } */
+        }, {
+            test: /\.styl/,
+            use: [
+                'style-loader', 'css-loader', {
+                    loader: 'postcss-loader',
+                    options: {
+                        sourceMap: true,
+                    }
+                },
+                'stylus-loader'
+            ]
+        }]
     }
 }
