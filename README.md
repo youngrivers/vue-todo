@@ -31,3 +31,5 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
         new VueLoaderPlugin()
     ],
 ```
+[参考](https://github.com/itPoet/vue-webpack-todoapp)
+[Vue+Webpack打造todo应用](https://www.imooc.com/learn/935)

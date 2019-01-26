@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+//const ExtractPlugin = require('extraxt')
 
 module.exports = {
     mode: 'development',
@@ -58,7 +59,7 @@ module.exports = {
                                 name: '[name].[ext]?[hash]'
                             } */
         }, {
-            test: /\.styl/,
+            test: /\.styl$/,
             use: [
                 'style-loader', 'css-loader', {
                     loader: 'postcss-loader',

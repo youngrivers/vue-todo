@@ -18,7 +18,11 @@
             }
         },
         methods:{
-            deleteTodo(){}
+            deleteTodo(){
+                // this.$emit 触发del事件，并返回todo.id
+                // 往父组件传递 del 方法
+                this.$emit('del',this.todo.id)
+            }
         }
     }
 </script>
@@ -30,7 +34,7 @@
         font-size 24px
         border-bottom 1px solid rgba(0,0,0,0.06)
         &:hover{
-            .destroy:after{
+            .destory:after{
                 content: '×'
             }
         }
@@ -71,7 +75,7 @@
             content: url('../assets/images/done.svg')
         }
     }
-    .destroy{
+    .destory{
         position: absolute;
         top: 0;
         right: 10px;

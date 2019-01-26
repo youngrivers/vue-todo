@@ -1,11 +1,10 @@
 <template>
     <div id="#app">
-      <h1>by writer:</h1>
-        <h1>{{msg}}</h1>
-        <div id="cover"></div>
-        <Header></Header>
-        <Todo></Todo>
-        <Footer></Footer>
+      <h1>by writer:{{msg}}</h1>
+      <div id="cover"></div>
+      <Header></Header>
+      <Todo></Todo>
+      <Footer></Footer>
     </div>
 </template> 
 
@@ -42,8 +41,8 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #999;
-  opacity: .9;
+  background-color: #555;
+  opacity: .5;
   z-index: -1;
 }
 </style>
