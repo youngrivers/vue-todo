@@ -27,7 +27,7 @@
     }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
     .todo-item{
         position:relative;
         background-color:#fff;
