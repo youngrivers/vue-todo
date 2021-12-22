@@ -37,6 +37,7 @@ module.exports = {
         rules: [{
             test: /\.vue$/,
             loader: 'vue-loader',
+            //use: 'vue-loader',
             options: {
                 loader: {
                     scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
@@ -61,7 +62,8 @@ module.exports = {
         }, {
             test: /\.styl$/,
             use: [
-                'style-loader', 'css-loader', {
+                'style-loader', 
+                'css-loader', {
                     loader: 'postcss-loader',
                     options: {
                         sourceMap: true,

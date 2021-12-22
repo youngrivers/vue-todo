@@ -48,36 +48,36 @@
     }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="css" scoped>
     .helper {
-        font-weight 100
-        display flex
-        justify-content space-between
-        padding 5px 0
-        line-height 30px
-        background-color #ffffff
-        font-size 14px
-        font-smoothing: antialiased;
+        font-weight:100;
+        display:flex;
+        justify-content:space-between;
+        padding:5px 0;
+        line-height:30px;
+        background-color:#ffffff;
+        font-size:14px;
+        font-smoothing:antialiased;
     }
     .left, .clear, .tabs {
-        padding 0 10px
-        box-sizing border-box
+        padding:0 10px;
+        box-sizing:border-box;
     }
     .left, .clear {
-        width 150px
+        width:150px
     }
     .left {
-        text-align left
+        text-align:left
     }
     .clear {
-        text-align: right
-        cursor pointer
+        text-align: right;
+        cursor:pointer
     }
     .tabs {
-        width 200px
-        display flex
-        justify-content space-around
-        * {
+        width:200px;
+        display:flex;
+        justify-content:space-around;
+        /* * {
             display inline-block
             padding 0 10px
             cursor pointer
@@ -86,7 +86,7 @@
                 border-color rgba(175, 47, 47, 0.4)
                 border-radius 5px
             }
-        }
+        } */
     }
 
 </style>
